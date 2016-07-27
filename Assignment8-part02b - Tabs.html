@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 8 - part 2b - Tabbed Menu Bar </title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <!-- <link href="styles/main.css" type="text/css" rel="stylesheet" /> -->
+        
+        
+<style>
+    body {
+        background: Steelblue;
+        color: DarkSlateGrey;
+    }
+    
+    h1{
+        color:white;
+    }
+    
+    p {
+        line-height: 1.5em;
+    }
+    
+    .tabNav  {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    .tabNav li {
+        display: inline-block;   
+    }
+    
+    .tabNav a {
+        background: LightSteelBlue; 
+        border-radius: 3px 3px 0 0;
+        color: white;
+        display: block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+    }
+    
+    .tabNav a:hover {
+        background: Tomato;
+    }
+    
+    .tabNav a.current {
+        background:Tomato;
+    }
+    
+    
+    
+    .tab {
+        background: white;
+        border: 5px solid GhostWhite;
+        padding: 1em;
+    }
+    
+    
+    
+</style> 
+        
+        
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>         
+        <script type = "text/javascript">
+            $("document").ready(function() {
+                
+                $('.tab').hide();
+                    $('.tabNav a').on('click', function () {
+                    $(this.hash).show();
+                    $(this.hash).siblings().hide();  
+                    }).first().click();
+
+                
+            }); // finish document.ready
+        </script>
+    </head>
+    
+    <body>
+
+<h1> Assignment 8 - part 2b - Tabbed Menu Bar</h1>  
+        
+        
+        
+        
+<ul class="tabNav">
+    <li><a href="#rabbitIsland">Rabbit Island</a></li>
+    <li><a href="#foxVillage">Fox Village</a></li>
+    <li><a href="#catIsland">Cat Island</a></li>            
+</ul>        
+        
+        
+ <div class="tab-content">
+        <div class="tab" id="rabbitIsland">
+            <h2>Okunoshima - aka Rabbit Island</h2>
+            <p> Okunoshima is a small island located in the Inland Sea of Japan in the city of Takehara, Hiroshima Prefecture. It is accessible by ferry from Tadanoumi and Ōmishima. There are campsites, walking trails and places of historical interest on the island. It is often called Usagi Shima ("Rabbit Island") because of the numerous feral rabbits that roam the island; they are rather tame and will approach humans. Okunoshima played a key role during World War II as a poison gas factory for much of the chemical warfare that was carried out in China </p>
+        </div> <!-- close tab1 -->
+    
+        <div class="tab" id="foxVillage">
+            <h2>Zao Fox Village</h2>
+            <p>  Opened in 1990 and located in Miyagi Prefecture, "Zao Fox Village" is a sanctuary home to over a hundred free-roaming foxes, including the silver fox and the platinum fox as well as the Japanese red fox. You can get close to the animals, so in that regards, the fox village is kind of like cat island or bunny island. </p>
+        </div> <!-- close tab2 -->
+    
+        <div class="tab" id="catIsland">
+            <h2>Tashirojima - aka Cat Island</h2>
+            <p>  Tashirojima is a small island in Ishinomaki, Miyagi, Japan. It lies in the Pacific Ocean off the Oshika Peninsula, to the west of Ajishima. It is an inhabited island, although the population is quite small (around 100 people, down from around 1000 people in the 1950s). It has become known as "Cat Island" due to the large stray cat population that thrives as a result of the local belief that feeding cats will bring wealth and good fortune. The cat population is now larger than the human population on the island. </p>
+        </div> <!-- close tab3 -->    
+        
+</div> <!--  close tab-content container -->
+    </body>
+    
+</html>

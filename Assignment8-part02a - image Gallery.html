@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 8 - part 2a - Slide Show Gallery </title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <!-- <link href="styles/main.css" type="text/css" rel="stylesheet" /> -->
+        
+        
+<style type='text/css'>
+    h1 {
+        text-align: center;
+    }
+    #galleryNav {
+        margin-left: 400px;  
+    }     
+    
+    #galleryNav li {    
+            font-size: 1.5em;        
+            list-style-type:none;
+            padding: 20px;        
+            margin: 5px;      
+            border: solid 1px lightgrey;
+            float:left;        
+            color: darkslategrey;
+            border-radius: 3px;  
+        
+      
+    }
+    
+      #galleryNav a li {
+            text-decoration: none;
+            color: darkslategrey;
+
+    }
+    
+      #galleryNav a li:hover {
+            color: tomato;
+            border: solid 1px tomato; 
+            border-radius: 3px;            
+    }
+    
+    
+    #full-size {
+        width: 500px;
+        height: 300px;
+        margin: 0px auto;    
+        background-size: contain;
+    }
+    
+    .mazda {
+        background: url('images/2013-Mazda_500x300.jpg') no-repeat left top;
+    }
+    
+    .jla {
+        background: url('images/2017_Justice_League_500x300.jpg') no-repeat left top;
+    }    
+    
+    .soundwave {
+        background: url('images/2016-Soundwave_Tablet%20500x300a.jpg') no-repeat left top;
+    }    
+    
+    .pokemongo {
+        background: url('images/2016Pokemon_go-500x300.jpg') no-repeat left top;
+    }     
+    
+    .startrek {
+        background: url('images/2016StarTrek-500x300.jpg') no-repeat left top;
+    }       
+    
+</style> 
+        
+        
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>         
+        <script type = "text/javascript">
+            $("document").ready(function() {
+
+                
+                $('li').click(function() {
+                    var galleryNav = $(this).attr('id');
+                    var displayWindow = $('#full-size').attr('class');
+                    
+                    $('#full-size').fadeOut(function() {
+                        $('#full-size').removeClass(displayWindow);
+                        $('#full-size').addClass(galleryNav).fadeIn('slow');
+                    })
+                })
+            }); // finish document.ready
+        </script>
+    </head>
+    
+    <body>
+
+        
+<main>      
+<h1> Assignment 8 - part 2a - Slide Show Gallery </h1>  
+    
+       <div id= 'full-size'> &nbsp; <!-- <img src='images/2013-Mazda_500x300.jpg' id='image'> --></div>   
+<div id='galleryNav'>
+    <ul>
+        <a href='#'><li id ='mazda'> 01 </li></a>
+        <a href='#'><li id ='jla'> 02 </li></a>
+        <a href='#'><li id ='soundwave'> 03 </li></a>
+        <a href='#'><li id ='pokemongo'> 04 </li></a>
+        <a href='#'><li id ='startrek'> 05 </li></a>
+    </ul>        
+</div>  
+</main>    
+
+    </body>
+    
+</html>

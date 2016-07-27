@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+    
+        <title>Assignment 8 - part 2c - Accordion </title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <!-- <link href="styles/main.css" type="text/css" rel="stylesheet" /> -->
+
+<style>
+    
+    body {
+        background:teal;    
+    }
+    
+    #wrapper {
+        margin: 50px auto;
+        width: 700px;
+
+    }
+    
+    h1 {
+        font-size:50 px;
+        color: #f6f6f6; 
+        text-align: center;
+        padding: 5px;
+        margin: 0px;
+    }
+    
+    h2.accordion {
+        padding: 0px;
+        margin: 0px 0px 5px 0px;
+        background: #333;
+        height: 46px;
+        line-height: 46px;
+        width: 700px;
+        font-size: 16px;
+        font-weight: bold;
+        float:left;
+        border-radius: 5px;
+        border: 1px solid #666;
+    }
+    
+    
+    h2.accordion a {
+    color: #f6f6f6;    
+    text-decoration:none;
+    padding-left: 20px;
+    display: block;  
+    border-radius: 5px;
+    }
+    
+    h2.accordion a:hover {
+        color:white;
+        background: Tomato;
+        
+    }
+    
+    .accContainer {
+        margin: 0px 0px 5px 0px;
+        padding 0px;
+        overflow: hidden;
+        font-size: 1.2em;
+        color: #666;
+        width: 700px;
+        clear:both;
+        background: #f6f6f6;
+        border: 1px solid #666;
+    }
+    
+    .accContainer .block {
+        padding: 20px;
+    }
+    
+    .icon {
+        display:inline;
+    }
+    
+        
+</style> 
+    </head>
+    
+    <body>
+
+<h1> Assignment 8 - part 2c - Accordion Menu Bar</h1>  
+        
+        
+  
+        
+ <div id="wrapper">
+            <h2 class='accordion'><a href='#'><div class='icon'></div> Suicide Squad </a></h2>
+            <div class='accContainer'>  
+                <div class='block'>
+<p>Intelligence officer Amanda Waller (Viola Davis) decides to assemble a team of dangerous, incarcerated supervillains for a top-secret mission. Figuring it has nothing to lose, the U.S. government supplies weapons to Deadshot (Will Smith), Harley Quinn (Margot Robbie), Captain Boomerang (Jai Courtney) and other despicable inmates. Dubbed the Suicide Squad, the united criminals must defeat a mysterious and powerful entity while contending with the antics of the diabolical Joker (Jared Leto).</p>
+                </div> <!-- close block -->    
+            </div> <!-- close accContainer-->
+     
+
+            <h2 class='accordion'><a href='#'><div class='icon'></div> Wonder Woman</a></h2>
+            <div class='accContainer'>  
+                <div class='block'>
+<p>Diana, princess of the Amazons, was raised on a sheltered island and trained to be an unconquerable fighter. After an American pilot, Steve Trevor, crashes on the island and tells her about a world war that is happening, Diana leaves her home to try to stop the war.</p>
+                </div> <!-- close block -->    
+            </div> <!-- close accContainer-->     
+     
+
+            <h2 class='accordion'><a href='#'><div class='icon'></div> Justice League</a></h2>
+            <div class='accContainer'>  
+                <div class='block'>
+<p>Months after the events of Batman v Superman, Bruce Wayne and Diana Prince assemble a team of metahumans to face the catastrophic threat of Steppenwolf and his army of Parademons who are on the hunt for three Mother Boxes on Earth. </p>
+                </div> <!-- close block -->    
+            </div> <!-- close accContainer-->         
+    
+</div> <!--  close wrapper container -->
+        
+        
+        
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>         
+        <script type = "text/javascript">
+            $("document").ready(function() {
+                $('.accContainer').hide();
+                    $('.accordion').click(function() {
+                        
+                        if ($(this).next().is(':hidden')) {
+                            $(this).next().slideDown();
+                            $('.icon').text('+');
+                            $('.icon').text('-');
+                           
+                        } else {
+                            $(this).next().slideUp();
+                             $('.icon').text('-');
+                             $('.icon').text('+');
+                        }
+                    });
+                
+                    $('.icon').text('+');
+                    
+            }); // finish document.ready
+        </script>        
+    </body>
+    
+</html>

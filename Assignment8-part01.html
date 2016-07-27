@@ -1,0 +1,230 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 8 - part 1</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <!-- <link href="styles/main.css" type="text/css" rel="stylesheet" /> -->
+        
+        
+<style>
+    #Q5  {
+        border: solid orange 2px;
+        
+    }
+    
+</style> 
+        
+        
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>         
+        <script type = "text/javascript">
+            $("document").ready(function() {
+                
+// question 1   
+/*                 */
+                $('#button1').click(function() {
+                    alert("Success, the jQuery script was triggered.");
+                });
+           
+            
+// question 2  
+/*               
+                $('#button2').bind('click', function() {
+                    alert("MSG from button 2: Success, the jQuery script was triggered here too.");
+                });
+ */ 
+                
+                
+// question 3 
+/*               
+                $('#button3').on('click', function(){
+                    alert('jQuery Script success from button 3.')
+                });
+
+*/               
+                
+                
+// question 4  
+/*                
+             $('#button4a, #button4b').on('click', function() {
+                alert('This message is for button 4a and 4b. It should work when either of the buttons are clicked')
+             });   
+*/
+                
+                
+// question 5 
+/*
+            $('#Q5').css("width", 500);
+            $('#Q5').css("height", 500);
+                
+
+                $('#Q5').on('click', function(){
+                    alert('The div was just clicked');
+                });
+                
+      
+                $('#Q5').on('mouseenter, mouseleave' , function() {
+                    alert('This alert was brought to you by a mouseenter, mouseleave event!');
+                });
+       
+ */ 
+
+// question 6 re-write question 5
+/*                
+                $('#Q6').css('width', 300);
+                $('#Q6').css('height', 300);
+                $('#Q6').css('border', 'solid', '2px', 'grey');
+                    $('#Q6').on('click', function() {
+                        alert('Question 6 Div was just clicked');
+                    });
+                    
+                    $('#Q6').on('mouseenter', function() {
+                        alert('EEEKK! There\'s a mouse in the house!');
+                    });
+
+                    $('#Q6').on('mouseleave', function() {
+                        alert('The MOUSE has just left the building...')
+                    });
+*/
+                
+     
+// question 7 
+/*   */              
+
+                $("a [href='google']").click(function () {
+                    $(window).attr('location', 'http://www.godaddy.com');
+                    $('a').css('color', 'red');
+                });
+                
+                
+// question 8 
+/*               
+                $('#Q8').css('border', 'solid 1px green');
+                
+                $(window).resize(function() {
+                    $('#browserWidth').prepend($(window).width());
+                })
+                
+                $(window).resize(function() {
+                    $('#browserHeight').prepend($(window).height());
+                })
+*/  
+
+
+// question 9 
+/*           
+            $('#Q9').focus(function() {
+                $('#Q9').css('background', 'grey');
+            });
+
+            $('#Q9').blur(function() {
+                $('#Q9').css('background', 'white');
+            });
+     
+*/
+                
+// question 10 Simple Valitation of fields
+/*              
+        
+            $('#submit').click(function() {
+                if ($('#name').val() == '') {
+                    $('#name').css('border', 'solid 2px red'); 
+                    //alert('Please enter a name');
+                }
+            });                 
+            
+            $('#submit').click(function() {
+                if ($('#email').val() == '') {
+                $('#email').css('border', 'solid 2px red');        
+                //alert('Please enter an email address');
+                }
+            });    
+                
+                
+// name on focus on blur                
+                $('#name').focus(function () { 
+                    $('#name').css('border', 'solid 3px green');
+              })
+                $('#name').blur(function () { 
+                    $('#name').css('border', '');
+              })
+                
+                
+// email on focus on blur                
+                $('#email').focus(function () { 
+                    $('#email').css('border', 'solid 3px green');
+              })
+                $('#email').blur(function () { 
+                    $('#email').css('border', '');
+              })                
+ 
+*/
+
+
+            }); // finish document.ready
+        </script>
+    </head>
+    
+    <body>
+
+        <input type="button" id="button1" value="using .click">
+        <input type="button" id="button2" value="using .bind">        
+        <input type="button" id="button3" value="using .on">     
+        <br /> <br />
+        
+        
+        <input type="button" id="button4a" value="Question 4a" />
+        <input type="button" id="button4b" value="Question 4b" />
+        <br /> <br />
+        
+        
+        <div id="Q5">Question 5</div>
+        <br /> <br /> <br />
+        
+        <span>
+        <div id="Q6">Question 6</div>            
+        </span>
+        <br /> <br />
+        
+        Question 7: Would you like to go to <a href="http://www.google.com"> Google</a>?
+        <br /> <br /> <br /> 
+            
+   
+        <div id='Q8'>   Question 8: <br /> <br />
+        browser width: <p id="browserWidth"></p> <br />
+        browser height: <p id="browserHeight"</p> <br />        
+        
+        </div>
+        <br /> <br />      
+        
+        
+        Question 9: <input type='text' id="Q9">
+        <br /> <br /> <br />        
+        
+        
+        Question 10: <br /> <br />
+        <form>
+            Name: <input type='text' id="name"><br /><br />
+            Email: <input type='text' id="email"><br /><br />
+            <button type="submit" id="submit">Submit Button</button>
+        </form>
+        
+        
+            
+        
+        
+        </div>
+        
+        
+        
+        
+    
+    </body>
+    
+</html>
